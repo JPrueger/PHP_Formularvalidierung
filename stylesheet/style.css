@@ -1,0 +1,345 @@
+
+/* *************** BITTE LESEN ***************  */
+
+/* Ich werde dieses Formular dann für die Abgabe zum Online-Shop verwenden, deshalb habe ich schon ziemlich viel
+CSS Code geschrieben. Die JavaScript Klassen habe ich auch deswegen schon vergeben, damit ich bei der großen Abgabe
+dann weiter darauf aufbauen kann! 
+
+Deswegen wurden die Navigationspunkte bei dieser Abgabe auch noch nicht richtig verlinkt!
+*/
+
+/* --------------------------- GENERAL ---------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    /* Meldung: "Invalid separator in shape definition. It must be a comma." - code für Visually Hidden von Unterricht übernommen */ 
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+    font-family: whitman-display, serif;
+}
+
+a {
+    margin: 0;
+    font-family: whitman-display, serif; 
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0 20px 0 20px;
+}
+
+html {
+    font-size: 25px;
+}
+
+
+/* --------------------------- BUTTON ---------------------------*/
+
+button {
+    background-color: #EB5E5E;
+    border: 2px solid #EB5E5E;
+    padding: 7px 50px 7px 50px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: whitman-display, serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 40px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: white;
+    border: 2px solid #EB5E5E;
+    color: #EB5E5E;
+}
+
+
+/* --------------------------- NAVIGATION ---------------------------*/
+
+.wrapper_nav li {
+    text-decoration: none;
+    list-style: none;
+    padding-right: 2rem; 
+}
+
+.wrapper_nav li:last-child {
+    padding-right: 0; 
+}
+
+.hash_logo a {
+    font-size: 2rem;
+    color: #EB5E5E;
+    font-family: whitman-display, serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.wrapper_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_mag {
+    display: flex;
+    padding-left: 0;
+}
+
+.menu_mag li:nth-child(2), li:nth-child(3), li:nth-child(1)   {
+    transform: translateY(13%);
+}
+
+.hash_logo p {
+    transform: translateY(-20%);
+}
+
+.current {
+    font-weight: 800;
+} 
+
+
+/* --------------------------- HEADER ---------------------------*/
+
+h1 {
+    text-align: right;
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+    font-family: whitman-display, serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.h1_highlight {
+    color: #EB5E5E;
+}
+
+.intro, .selection_paragraph {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-family: whitman-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+    margin-bottom: 100px;
+    width: 60%;
+}
+
+.img-first-issue {
+    width: 100%;
+}
+
+
+/* --------------------------- BODY ---------------------------*/
+
+.magazin_cover {
+    box-shadow: 0 3px 7px lightgray;
+    width: 100%;   
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: 2px solid #EB5E5E;
+    width: 85%;
+    margin-left: 0;
+}
+
+
+/* --------------------------- THIS ISSUE ---------------------------*/
+
+.grid-wrapper-headline {
+    display: grid;
+    grid-column-gap: 35px;
+    grid-auto-flow: row;  
+    grid-template-columns: repeat(3,minmax(300px, 1fr)); 
+    padding-left: 1rem;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-column-gap: 35px;
+    padding-left: 1rem;
+    grid-auto-flow: row;  
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); 
+    margin-bottom: 2rem;
+}
+
+.grid-wrapper p, .grid-wrapper hr {
+    margin-bottom: 10%;
+}
+
+
+/* --------------------------- FOOTER ---------------------------*/
+
+footer a, footer p {
+    color: #EB5E5E;
+}
+
+footer div {
+    margin-bottom: 1rem;
+    width: 60%;
+    padding-right: 2rem;
+}
+
+footer div:last-child {
+    padding-right: 0;
+}
+
+.wrapper-some {
+    display: flex;
+    padding-right: 0;
+}
+
+.wrapper-some div:last-child{
+    padding-right: 0;
+}
+
+
+/* --------------------------- ############ SUBPAGE MAGAZINE ############ ---------------------------*/
+
+.all_magazin {
+    display: grid;
+    grid-column-gap: 35px;
+    grid-auto-flow: row;  
+    padding-left: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}
+
+.magazin button {
+    margin-bottom: 3rem;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.price {
+    color: #EB5E5E;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: whitman-display, serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.link-more-information {
+    text-decoration: underline;
+}
+
+.magazin p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+
+/* --------------------------- REGISTER FORM ---------------------------*/
+
+.j-form p {
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-family: whitman-display, serif;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 0.5rem;
+}
+
+.errors_php {
+    margin-bottom: 1rem;
+}
+
+.successfully_sent_message {
+    padding-left: 5rem;
+    margin-bottom: 15rem;
+}
+
+.chooseCountry {
+    width: 80%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 0.7rem;
+    font-family: whitman-display, serif;
+    font-weight: 400;
+}
+
+.form_p {
+    margin-bottom: 1rem;
+    padding-left: 5rem;
+}
+
+.form-mandatory {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.button-submit {
+    margin-bottom: 1rem;
+}
+
+.formular h2 {
+    padding-left: 5rem;
+}
+
+
+/* --------------------------- MEDIA QUERIES ---------------------------*/
+
+@media (min-width: 1000px) {
+
+    h1 {
+        font-size: 6rem;
+        line-height: 5.2rem;
+        max-width: 45%;
+        position: absolute;
+        right: 20px;
+        top: 2rem;
+        text-align: right;
+        display: block;
+    }
+    
+    .grid-wrapper, .grid-wrapper-headline, .all_magazin {
+        padding-left: 5rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5rem;
+    }
+
+    .img-first-issue {
+        width: 65%; 
+        margin-bottom: 5%;
+    }
+
+    .item2 {
+        grid-column: 2 / 4;
+    }
+   
+} 
